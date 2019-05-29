@@ -1,0 +1,20 @@
+D:\Python\Python36-32\python.exe D:/GoodWill/NewWordsDetection/preprocessing.py
+D:\Python\Python36-32\lib\site-packages\gensim\utils.py:862: UserWarning: detected Windows; aliasing chunkize to chunkize_serial
+  warnings.warn("detected Windows; aliasing chunkize to chunkize_serial")
+Traceback (most recent call last):
+  File "D:/GoodWill/NewWordsDetection/preprocessing.py", line 12, in <module>
+    import gensim
+  File "D:\Python\Python36-32\lib\site-packages\gensim\__init__.py", line 6, in <module>
+    from gensim import parsing, matutils, interfaces, corpora, models, similarities, summarization, utils  # noqa:F401
+  File "D:\Python\Python36-32\lib\site-packages\gensim\models\__init__.py", line 8, in <module>
+    from .hdpmodel import HdpModel  # noqa:F401
+  File "D:\Python\Python36-32\lib\site-packages\gensim\models\hdpmodel.py", line 46, in <module>
+    from gensim.models import basemodel, ldamodel
+  File "D:\Python\Python36-32\lib\site-packages\gensim\models\ldamodel.py", line 51, in <module>
+    from scipy.misc import logsumexp
+ImportError: cannot import name 'logsumexp'
+
+Process finished with exit code 1
+
+Solution:
+Change from scipy.misc import logsumexp to from scipy.special import logsumexp
